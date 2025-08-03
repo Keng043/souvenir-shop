@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>รายละเอียดสินค้า</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body class="min-h-screen text-gray-800 bg-gradient-to-br from-blue-100 ">
+
+  <!-- Header -->
+  <header class="bg-white shadow">
+    <div class="max-w-6xl mx-auto p-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-blue-700">🎓 ของที่ระลึก 30 ปี วิทยาการคอมพิวเตอร์</h1>
+      <a href="index.html" class="text-blue-600 hover:underline font-semibold"> กลับหน้าแรก</a>
+    </div>
+  </header>
+
+  <!-- Section: รูปภาพ + รายละเอียด -->
+  <main class="max-w-4xl mx-auto py-12 px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
+    
+    <!-- สไลด์ภาพสินค้า -->
+    <div class="relative overflow-hidden w-full">
+      <div id="imageSlider" class="flex transition-transform duration-500">
+        <img src="img/แก้วสีขาว.png" class="w-full h-auto object-cover" />
+        <img src="img/แก้วสีเขียว.png" class="w-full h-auto object-cover" />
+        <img src="img/แก้วสีเทา.png" class="w-full h-auto object-cover" />
+      </div>
+
+        <!-- ปุ่มเลื่อน -->
+      <button onclick="prevSlide()" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white shadow p-2 rounded-full">
+        ◀
+      </button>
+      <button onclick="nextSlide()" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white shadow p-2 rounded-full">
+        ▶
+      </button> 
+    </div>
+
+    <!-- รายละเอียดสินค้า -->
+    <div class="flex flex-col justify-center">
+      <h1 class="text-3xl font-semibold mb-3">กระบอกน้ำเก็บอุณหภูมิ</h1>
+      <br class="text-gray-600 mb-6 leading-relaxed">
+        👉กระบอกน้ำเก็บอุณหภูมิ👈<br>
+        ✅ ขนาด 500 ml<br>
+        ✅ สามารถเก็บได้ทั้งความร้อน - ความเย็น นานถึง 10 -14 ชั่วโมง<br>
+        ✅ ภายในทำจากสแตนเลส 304 (Food Grade) 2 ชั้นอย่างดี<br>
+        ✅ พร้อมกล่องมอบเป็นของขวัญของที่ระลึกได้ทันที<br>
+      </p>
+
+      <ul class="mb-6 space-y-2 text-gray-700">
+        <li><strong>สี:</strong> เขียว, ขาว, เทา</li>
+        <li><strong>ขนาด:</strong> กลาง</li>
+        <li><strong>ราคา:</strong> <span class="text-blue-600 font-semibold">295 บาท</span></li>
+      </ul>
+
+      <a 
+        href="Order.html" 
+        class="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition"
+      >
+        สั่งซื้อสินค้า
+      </a>
+    </div>
+  </main>
+
+  <script src="product.js"></script>
+</body>
+</html>

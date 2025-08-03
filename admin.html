@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin จัดการสินค้า</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function showMessage() {
+      const message = document.getElementById('updateMessage');
+      message.classList.remove('hidden');
+      setTimeout(() => {
+        message.classList.add('hidden');
+      }, 2000);
+    }
+  </script>
+</head>
+<body class="min-h-screen text-gray-800 bg-gradient-to-br from-blue-100 ">
+  <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-6 sm:p-10 space-y-8">
+    
+    <div class="flex items-center justify-between">
+      <h1 class="text-2xl font-bold text-blue-700">🛠️ Admin: จัดการสินค้า</h1>
+      <a href="index.html" class="text-blue-600 hover:underline text-sm">กลับหน้าแรก</a>
+    </div>
+
+    <!-- ฟอร์มจัดการสินค้า -->
+    <form onsubmit="event.preventDefault(); showMessage();" class="space-y-6">
+      
+      <div>
+        <label for="productName" class="block mb-1 text-gray-700 font-medium">ชื่อสินค้า</label>
+        <input type="text" id="productName" placeholder="ชื่อสินค้า"
+          class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-400 focus:outline-none transition" />
+      </div>
+
+      <div>
+        <label for="productPrice" class="block mb-1 text-gray-700 font-medium">ราคา</label>
+        <input type="number" id="productPrice" placeholder="กรอกราคา"
+          class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-400 focus:outline-none transition" />
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="productColor" class="block mb-1 text-gray-700 font-medium">สีที่มี</label>
+          <input type="text" id="productColor" placeholder="กำหนดสี เช่น ดำ, ขาว"
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-400 focus:outline-none transition" />
+        </div>
+
+        <div>
+          <label for="productSize" class="block mb-1 text-gray-700 font-medium">ขนาด</label>
+          <input type="text" id="productSize" placeholder="เช่น S, M, L"
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-400 focus:outline-none transition" />
+        </div>
+      </div>
+
+      <div>
+        <label for="paymentSlip" class="block mb-1 text-gray-700 font-medium">ใส่รูปภาพสินค้า</label>
+        <input type="file" id="paymentSlip" accept="image/*,application/pdf"
+          class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-400 focus:outline-none transition" />
+      </div>
+
+      <button type="submit"
+        class="w-full sm:w-auto bg-green-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-green-700 transition duration-200">
+        อัปเดตสินค้า
+      </button>
+    </form>
+
+    <p id="updateMessage" class="text-green-600 text-sm font-semibold hidden">✅ อัปเดตข้อมูลแล้ว</p>
+  </div>
+</body>
+</html>
